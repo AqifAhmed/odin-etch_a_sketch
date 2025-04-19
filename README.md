@@ -1,1 +1,1 @@
-# odin-etch_a_sketch
+The 2nd Last Project on Odin Foundations Course
