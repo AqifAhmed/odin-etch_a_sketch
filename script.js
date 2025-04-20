@@ -18,7 +18,7 @@ btn.addEventListener("click", () => {
     cont.appendChild(document.createElement('br'));
 
 
-    num = prompt("Enter the Number of Blocks Needed: ");
+    num = prompt("Enter the Number of Blocks Needed(Keep it no more than 20): ");
     for (let i = 0; i < parseInt(num); i++) {
         for(let j = 0; j < parseInt(num); j++){
             
