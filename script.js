@@ -6,7 +6,7 @@ var num;
 
 const cont = document.querySelector(".container");
 
-cont.appendChild(btn);
+document.body.appendChild(btn);
 cont.appendChild(document.createElement('br'));
 
 btn.addEventListener("click", () => {
@@ -14,13 +14,15 @@ btn.addEventListener("click", () => {
     while (cont.firstChild) {
         cont.removeChild(cont.firstChild);
     }
-    cont.appendChild(btn);
+    document.body.appendChild(btn);
     cont.appendChild(document.createElement('br'));
-
-
-    num = prompt("Enter the Number of Blocks Needed(Keep it no more than 20): ");
-    for (let i = 0; i < parseInt(num); i++) {
-        for(let j = 0; j < parseInt(num); j++){
+    
+    
+    num = parseInt(prompt("Enter the Number of Blocks Needed(Keep it no more than 30): "));
+    
+    cont.style.width = `${num * 24}px`;
+    for (let i = 0; i < num; i++) {
+        for(let j = 0; j < num; j++){
             
             const divs = document.createElement("div");
             
@@ -32,12 +34,10 @@ btn.addEventListener("click", () => {
             divs.addEventListener("mouseover", () => {
                 let currentOpacity = parseFloat(divs.style.opacity);
                 if (currentOpacity < 1) {
-                    divs.style.opacity = (currentOpacity + 0.2).toString();
+                    divs.style.opacity = (currentOpacity + 0.3).toString();
                 }
             });
         }
-        var br = document.createElement("BR");
-        cont.appendChild(br);
     }
 });
 
